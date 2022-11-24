@@ -31,19 +31,40 @@ const MiddleTop = () => {
     {
       id: 1,
       title: "Football",
-      desc: "Matuidi: Football has the power to create a better world",
+      desc: "Football has the power!",
       foot: "5-22-2022",
       thumb: "./matuidi.jpg",
     },
     {
       id: 2,
       title: "Football",
-      desc: "Messi says he’s fine, gets ovation and applause",
+      desc: "Messi says he gets ovation!",
       foot: "12-29-2022",
       thumb: "./messi.jpg",
     },
     {
       id: 3,
+      title: "Football Unites The World",
+      desc: "Messi says he’s fine.",
+      foot: "10-22-2022",
+      thumb: "./messi.jpg",
+    },
+    {
+      id: 4,
+      title: "Football Unites The World",
+      desc: "Neymar says he’s fine.",
+      foot: "10-22-2022",
+      thumb: "./messi.jpg",
+    },
+    {
+      id: 5,
+      title: "Football Unites The World",
+      desc: "Ronaldo says he’s fine.",
+      foot: "10-22-2022",
+      thumb: "./messi.jpg",
+    },
+    {
+      id: 6,
       title: "Football Unites The World",
       desc: "Messi says he’s fine.",
       foot: "10-22-2022",
@@ -128,28 +149,45 @@ const MiddleTop = () => {
             <h5>More</h5>
             <div className="row">
               {news.map((item) => (
-                <div
-                  className="card"
-                  style={{
-                    backgroundColor: "white",
-                    height: "6rem",
-                    width: "20rem",
-                    display: "inline-block",
-                  }}
-                >
-                  <div className="d-flex flex-direction-row text-align-center">
-                    <img
-                      src={item.thumb}
-                      alt="Card image"
-                      style={{
-                        height: "95px",
-                        width: "100px",
-                        display: "inline-block",
-                        borderRadius: "50px",
-                        padding: "5px 5px 5px 5px",
-                      }}
-                    />
-                    <p className="card-text px-3 pt-2">{item.desc}</p>
+                <div className="col-lg-4">
+                  <div
+                    className="card"
+                    style={{
+                      backgroundColor: "white",
+                      height: "6rem",
+                      width: "14rem",
+                      display: "inline-block",
+                      textAlign: "left",
+                      boxSizing:'border-box'
+                    }}
+                  >
+                    <div className="d-flex flex-direction-row text-align-center">
+                      <img
+                        src={item.thumb}
+                        alt="Card image"
+                        style={{
+                          height: "95px",
+                          width: "100px",
+                          display: "inline-block",
+                          borderRadius: "20px",
+                          padding: "5px 5px 5px 5px",
+                        }}
+                      />
+                      <button
+                    className="btn btn-danger"
+                    onClick={() => handledelete(item.id)}
+                    style={{
+                      position: "absolute",
+                      right: 5,
+                      bottom: 10,
+                      fontSize: "6px",
+                    }}
+                  >
+                    Delete
+                  </button>
+                  
+                      <p className="card-text px-3 pt-2">{item.desc}</p>
+                    </div>
                   </div>
                 </div>
               ))}

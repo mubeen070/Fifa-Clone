@@ -16,13 +16,14 @@
 .head li{
     display: inline-block;
     margin:0 auto;
+    margin-left: 10px;
 }
 .row1 img{
     height: 50px;
     width: 100px;
+    
 
 }
-
 .list{
     display: flex;
     justify-content: center;
@@ -30,6 +31,7 @@
     list-style: none;
     position: relative;
     width: 100%;
+    
 }
 .list2{
     display: flex;
@@ -37,7 +39,6 @@
     justify-content: center;
     align-items: center;
     list-style: none;
-
     text-decoration: none;
 }
 .listItems{
@@ -46,6 +47,7 @@
     text-transform: uppercase;
     padding: 1vh 2vw 1vh 2vw ;
     flex-wrap: nowrap;
+    margin-left: 10px;
     
 }
 .dropdown-menu{

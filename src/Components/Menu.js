@@ -1,5 +1,7 @@
 import React from "react";
 import "../Style/menu.css";
+// import { Link } from "react-router-dom";
+
 const Menu = () => {
   return (
     <>
@@ -15,8 +17,10 @@ const Menu = () => {
             <li>Login</li>
           </ul>
         </div>
-
-        <div className="row" style={{marginRight:' calc(-0 * var(--bs-gutter-x))'}}>
+        <div
+          className="row"
+          style={{ marginRight: " calc(-0 * var(--bs-gutter-x))" }}
+        >
           <ul className="list">
             <li className="listItems">Tournaments on Fifa+</li>
             <li className="listItems">About Fifa</li>
@@ -24,7 +28,26 @@ const Menu = () => {
             <li className="listItems">Social Impact</li>
             <li className="listItems">Football Development</li>
             <li className="listItems">Technical</li>
-            <li className="listItems">legal</li>
+            <li className="dropdown listItems">
+              Legal
+              <ul className="dropdown-menu">
+                <li className="listItems">
+                  {/* <Link
+                    to='/privacy'
+                  >
+                    Privacy
+                  </Link> */}
+                  Privacy
+                </li>
+                <li className="listItems">
+                  {/* <Link to='/terms'
+                  >
+                    Terms
+                  </Link> */}
+                Terms
+                </li>
+              </ul>
+            </li>
             <li className="dropdown listItems">
               World ranking
               <ul className="dropdown-menu">
