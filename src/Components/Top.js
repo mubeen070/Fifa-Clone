@@ -79,6 +79,14 @@ const MiddleTop = () => {
     setState(newdata);
     console.log("Deleted...");
   };
+  
+  const handledelete2 = (items1) => {
+    console.log("Deleting.." + items1);
+
+    const newdata = news.filter((items) => items.id != items1);
+    setNews(newdata);
+    console.log("Deleted...");
+  };
   const imgSty = {
     height: "10rem",
     width: "16rem",
@@ -175,7 +183,7 @@ const MiddleTop = () => {
                       />
                       <button
                     className="btn btn-danger"
-                    onClick={() => handledelete(item.id)}
+                    onClick={() => handledelete2(item.id)}
                     style={{
                       position: "absolute",
                       right: 5,
