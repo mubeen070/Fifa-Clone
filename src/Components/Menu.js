@@ -1,6 +1,6 @@
 import React from "react";
 import "../Style/menu.css";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Menu = () => {
   return (
@@ -32,11 +32,7 @@ const Menu = () => {
               Legal
               <ul className="dropdown-menu">
                 <li className="listItems">
-                  {/* <Link
-                    to='/privacy'
-                  >
-                    Privacy
-                  </Link> */}
+                  {/* <Link to='/privacy'>Privacy</Link> */}
                   Privacy
                 </li>
                 <li className="listItems">
