@@ -16,7 +16,7 @@ const Menu = () => {
           </ul>
         </div>
 
-        <div className="row">
+        <div className="row" style={{marginRight:' calc(-0 * var(--bs-gutter-x))'}}>
           <ul className="list">
             <li className="listItems">Tournaments on Fifa+</li>
             <li className="listItems">About Fifa</li>

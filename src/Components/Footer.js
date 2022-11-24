@@ -38,7 +38,7 @@ const Footer1 = () => {
         <div className="row d-flex align-items-center justify-content-center flex-direction-row pt-4">
           <h5 style={{ textAlign: "center" }}>FIFA Partners</h5>
           {Partners.map((item) => (
-            <img src={item.logo} alt="" style={imgStyle} />
+            <img src={item.logo} alt="" style={imgStyle} key={item.id}/>
           ))}
         </div>
         <img className="mx-4" src="fifa.png" alt="fifa" style={imgStyle} />

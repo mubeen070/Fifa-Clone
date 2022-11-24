@@ -15,7 +15,7 @@
 }
 .head li{
     display: inline-block;
-    margin:0 0 0 20px;
+    margin:0 auto;
 }
 .row1 img{
     height: 50px;
@@ -28,6 +28,7 @@
     justify-content: center;
     align-items: center;
     list-style: none;
+    position: relative;
     width: 100%;
 }
 .list2{
@@ -50,8 +51,13 @@
 .dropdown-menu{
     display: none;
 }
+.dropdown:hover{
+    color: blue;
+}
 .dropdown:hover > .dropdown-menu{
     display: flex;
     flex-direction: column;
+    
+
 
 }

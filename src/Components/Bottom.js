@@ -34,17 +34,18 @@ const CardData = [
   },
 ];
 
-const MiddleBottom = (props) => {
+const MiddleBottom = () => {
   const [state, setState] = useState(CardData);
 
   const imgSt = {
     width: "50px",
     height: "30px",
+    display: "inline-block",
   };
 
   return (
     <>
-      <div className="container">
+      <div className="container pt-4" style={{ border: "1px solid black" }}>
         <div className="row pt-5">
           <div className="col-4">
             <img src="./cokexfifa.png" alt="cokexfifa" />
@@ -53,51 +54,52 @@ const MiddleBottom = (props) => {
               The official world rankings of the international mens and womens
               teams.
             </p>
-            <h4>
-            FIFA/Coca-Cola World ranking
-            </h4>
+            <h4>FIFA/Coca-Cola World ranking</h4>
           </div>
           <div className="col-lg-4">
             <h3>MEN</h3>
             <table>
-              <tr style={{textAlign:'center'}}>
-                <th >RK</th>
-                <th className="px-5">Team</th>
-                <th >Points</th>
-              </tr>
-              {CardData.map((item) => (
-                <tr key={item.id} style={{ paddingTop: "50px" }}>
-                  <td>{item.id}</td>
-                  <td className="px-5">
-                    <img className="mx-2" src={item.thumb} style={imgSt} />
-                  {item.title}
-                  </td>
-                  <td>{item.points}</td>
+              <tbody>
+                <tr style={{ textAlign: "center" }}>
+                  <th>RK</th>
+                  <th className="px-4">Team</th>
+                  <th>Points</th>
                 </tr>
-              ))}
+                {CardData.map((item) => (
+                  <tr key={item.id} style={{ paddingTop: "50px" }}>
+                    <td>{item.id}</td>
+                    <td className="px-5" style={{ textAlign: "center" }}>
+                      <img className="mx-2" src={item.thumb} style={imgSt} />
+                      {item.title}
+                    </td>
+                    <td>{item.points}</td>
+                  </tr>
+                ))}
+              </tbody>
             </table>
           </div>
           <div className="col-lg-4">
-          <h3>WOMEN</h3>
+            <h3 style={{ fontWeight: "500" }}>WOMEN</h3>
             <table>
-              <tr style={{textAlign:'center'}}>
-                <th>RK</th>
-                <th>Team</th>
-                <th>Total Points</th>
-              </tr>
-              {CardData.map((item) => (
-                <tr key={item.id} style={{ paddingTop: "50px" }}>
-                  <td>{item.id}</td>
-                  <td className="px-5">
-                    <img className="mx-2" src={item.thumb} style={imgSt} />
-                  {item.title}
-                  </td>
-                  <td>{item.points}</td>
+              <tbody>
+                <tr style={{ textAlign: "center" }}>
+                  <th>RK</th>
+                  <th className="px-4">Team</th>
+                  <th>Total Points</th>
                 </tr>
-              ))}
+                {CardData.map((item) => (
+                  <tr key={item.id} style={{ paddingTop: "50px" }}>
+                    <td>{item.id}</td>
+                    <td className="px-5" style={{ textAlign: "center" }}>
+                      <img className="mx-2" src={item.thumb} style={imgSt} />
+                      {item.title}
+                    </td>
+                    <td>{item.points}</td>
+                  </tr>
+                ))}
+              </tbody>
             </table>
           </div>
-
         </div>
       </div>
     </>

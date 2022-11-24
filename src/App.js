@@ -7,8 +7,17 @@ function App() {
   return (
     <>
       <Menu />
-      <MiddleTop />
-      <MiddleBottom />
+      <div className="container" >
+        <div className="row">
+          <div className="col-lg-2"style={{border:'1px solid black'}}>
+            <h1>Hi I am left side bar</h1>
+          </div>
+          <div className="col-lg-10">
+            <MiddleTop />
+            <MiddleBottom />
+          </div>
+        </div>
+      </div>
       <Footer1 />
     </>
   );
